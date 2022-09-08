@@ -5,7 +5,7 @@
  *
  *return: succesfull
  */
-int main`(void)
+int main(void)
 /*
  * "Programming is like building a multilingual
  */
