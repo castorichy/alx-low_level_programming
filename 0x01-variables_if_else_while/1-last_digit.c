@@ -13,7 +13,8 @@ int main(void)
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	int a = n % 10;
+	int a;
+	a = n % 10;
 
 	/*checking if the last digit of a number*/
 	if (a > 5)
