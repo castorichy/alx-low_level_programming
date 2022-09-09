@@ -1,20 +1,18 @@
-/**
- *  file: 2-print_alphabet.c
- *
- *  Author: Duncan Kiprto
- */
 #include <stdio.h>
 
 /**
- *  main -Main function
+ * main - Prints the alphabet in lowercase, and then in uppercase.
  *
- *  Return: Always return 0
+ * Return: Always 0.
  */
 int main(void)
 {
 	char letter;
 
 	for (letter = 'a'; letter <= 'z'; letter++)
+		putchar(letter);
+
+	for (letter = 'A'; letter <= 'Z'; letter++)
 		putchar(letter);
 
 	putchar('\n');
