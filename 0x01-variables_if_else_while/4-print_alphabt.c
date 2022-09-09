@@ -1,13 +1,7 @@
-/**
- * File - 4-print_alphabt.c
- *
- * Author: Duncan Kipruto
- */
-
 #include <stdio.h>
 
 /**
- * main - Prints the alphabet in lowercase, and then in uppercase.
+ * main - Main Entry.
  *
  * Return: Always 0.
  */
