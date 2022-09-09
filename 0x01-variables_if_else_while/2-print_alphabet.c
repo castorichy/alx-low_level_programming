@@ -1,8 +1,3 @@
-/**
- *  file: 2-print_alphabet.c
- *
- *  Author: Duncan Kiprto
- */
 #include <stdio.h>
 
 /**
