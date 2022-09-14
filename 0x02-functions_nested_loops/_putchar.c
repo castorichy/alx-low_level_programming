@@ -2,6 +2,7 @@
 
 /**
  * main - Prints alphabets
+ *@s: character
  *
  * Return: Returns 0
  */
