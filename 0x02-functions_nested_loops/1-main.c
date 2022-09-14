@@ -1,11 +1,11 @@
 #include"main.h"
 
 /**
- * print_alphabet - gets alphabets
+ * main - gets alphabets
  *
  * Return: returns non
- */
-void print_alphabet(void)
+ */int main(void)
 {
 	print_alphabet();
+	return (0);
 }

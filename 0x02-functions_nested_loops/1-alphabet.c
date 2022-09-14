@@ -1,11 +1,11 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * main - main
+ * print_alphabet - main
  *
  * Return: non
  */
-int main(void)
+void print_alphabet(void)
 {
 	int alpha;
 
@@ -14,6 +14,4 @@ int main(void)
 		_putchar(alpha);
 	}
 	_putchar('\n');
-
-	return (0);
 }
