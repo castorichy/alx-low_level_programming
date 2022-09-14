@@ -1,20 +1,11 @@
-#include <stdio.h>
-#include <string.h>
+#include"main.h"
+
 /**
- * putchar - Prints out a char
+ * print_alphabet - gets alphabets
  *
- * Return: Always Return 0
+ * Return: returns non
  */
-int _putchar(void)
+void print_alphabet(void)
 {
-	putchar('_');
-	putchar('p');
-	putchar('u');
-	putchar('t');
-	putchar('c');
-	putchar('h');
-	putchar('a');
-	putchar('r');
-	putchar('\n');
-	return (0);
+	print_alphabet();
 }
