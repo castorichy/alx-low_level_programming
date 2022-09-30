@@ -1,19 +1,18 @@
 #include <stdio.h>
-#include <ctype.h>
 #include <stdlib.h>
 #include <string.h>
+
 /**
- * main - prints file name
- * @argc: holds the size of argv
- * @argv: An array of size argc
- *
- * Return: Always 0
+ * main - prints the sum of positive arguments passed to it
+ * @argc: arguments count
+ * @argv: array of arguments
+ * Return: always 0
  */
 
 int main(int argc, char *argv[])
 {
-	unsigned int j;
-	int i, sum = 0;
+	int i;
+	unsigned int k, sum = 0;
 	char *e;
 
 	if (argc > 1)
@@ -21,15 +20,16 @@ int main(int argc, char *argv[])
 		for (i = 1; i < argc; i++)
 		{
 			e = argv[i];
-			for (j = 0; j < strlen(e); j++)
+			for (k = 0; k < strlen(e); k++)
 			{
-				if (e[j] < 48 || e[j] > 57)
+				if (e[k] < 48 || e[k] > 57)
 				{
-					printf("Error");
+					printf("Error\n");
 					return (1);
 				}
 			}
 			sum += atoi(e);
+			e++;
 		}
 		printf("%d\n", sum);
 	}

@@ -2,37 +2,39 @@
 #include <stdlib.h>
 
 /**
- * main - prints file name
- * @argc: holds the size of argv
- * @argv: An array of size argc
+ * main - prints minimum number of coins to make change for an amount of money.
+ * @argc: number of arguments passed to the function
+ * @argv: argument vector of pointers to strings
  *
- * Return: Always 0
+ * Return: 0 if no errors, else 1
  */
-
 int main(int argc, char *argv[])
 {
-	int coins[] = {25, 10, 5, 2, 1};
-	int i,j;
-	char *e;
-	j = sizeof(coins) / sizeof(int);
-	if (argc > 1 && argc < 3)
+	int a, n = 0, i, t;
+	int c[5] = {25, 10, 5, 2, 1};
+
+	if (argc != 2)
 	{
-		e = atoi(rgv[1]);
-		for (i = 0; i < j; i++)
-		{
-			if (e % coins[i] == 0)
-			{
-				printf("argv[i]");
-			}
-			break;
-		}
+		puts("Error");
+		return (1);
+	}
+	a = atoi(argv[1]);
+	if (a <= 0)
+	{
+		puts("0");
+		return (1);
 	}
 	else
 	{
-		printf("Error");
-		return (1);
+		for (i = 0; i < 5; i++)
+		{
+			t = a / c[i];
+			a -= t * c[i];
+			n += t;
+			if (a == 0)
+				break;
+		}
 	}
-
-
-	return (1);
+	printf("%d\n", n);
+	return (0);
 }
