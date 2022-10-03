@@ -2,7 +2,7 @@
 * this repo contains all projects of memory alocation using maloc to allocate memory and free to free up the memory for future use.
 
 ## Tasks
-##**0. 0-create_array.c**
+##  **0. 0-create_array.c**
 Write a function that creates an array of chars, and initializes it with a specific char.
 * Prototype: char *create_array(unsigned int size, char c);
 * Returns NULL if size = 0
