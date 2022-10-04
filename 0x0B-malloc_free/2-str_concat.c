@@ -29,17 +29,16 @@ char *str_concat(char *s1, char *s2)
 	{
 		m++;
 	}
-	n += m;
-	t = malloc(sizeof(char) * n + 1);
+	t = malloc(sizeof(char) *(m+ n) + 1);
 
 	if (t == NULL)
 		return (NULL);
-	while (i < n - m)
+	while (i < n)
 	{
 		t[i] = s1[i];
 		i++;
 	}
-	while (j < n)
+	while (j < m)
 	{
 		t[i + j] = s2[j];
 		j++;
