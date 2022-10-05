@@ -17,11 +17,8 @@ char *str_concat(char *s1, char *s2)
 	int n = 0, m = 0;
 	char *t;
 
-	if (s1 == NULL)
-		s1 = " ";
-	if (s2 == NULL)
-		s2 = " ";
-	if (s2  == NULL && s1 == NULL)
+
+	if (s2  == NULL || s1 == NULL)
 		return (NULL);
 	while (s1[n] != '\0')
 	{
