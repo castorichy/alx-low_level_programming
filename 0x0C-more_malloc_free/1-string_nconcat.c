@@ -7,12 +7,12 @@
  * @s2: second string
  * @n: number of bits of s2 to be concatenated
  *
- * return: ptr
+ * Return: ptr
  */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int i , j;
+	unsigned int i, j;
 	unsigned int len_s1, len_s2, total_len;
 	char *ptr;
 
@@ -24,9 +24,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (" ");
 
 	/* length of s1 and s2 */
-	for ( ; *(s1 + i); i++)
+	for (i = 0; *(s1 + i); i++)
 		len_s1++;
-	for ( ; *(s2 + j); j ++)
+	for (j = 0; *(s2 + j); j++)
 		len_s2++;
 
 	if (n >= len_s2)
