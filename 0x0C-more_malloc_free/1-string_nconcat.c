@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib. h>
+#include <stdlib.h>
 
 /**
  * string_nconcat - concatenates two strings
@@ -12,13 +12,13 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int i =0, j = 0;
+	unsigned int i , j;
 	unsigned int len_s1, len_s2, total_len;
 	char *ptr;
 
 	len_s1 = len_s2 = total_len = 0;
 
-	if (s1 = NULL)
+	if (s1 == NULL)
 		return (" ");
 	if (s2 == NULL)
 		return (" ");
@@ -29,28 +29,22 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for ( ; *(s2 + j); j ++)
 		len_s2++;
 
-	if (len_s2 >= n)
+	if (n >= len_s2)
 	{
-		total_len = len_s1 + len_s2;
-		ptr = malloc(sizeof(char) * total_len + 2);
-		if (ptr == NULL)
-			return (NULL);
-		for ( ; i <= len_s1; i++)
-			ptr[i] = *(s1 + i);
-		for ( ; i <= len_s1, j++)
-			ptr[i +j] = *(s2 + j);
+		n = len_s2;
+		total_len = n + len_s1;
 	}
 	else
-	{
 		total_len = len_s1 + n;
-		ptr = malloc(sizeof(char) * total_len + 2);
-		if (ptr == NULL)
-			return (NULL);
-		if ( ; i <= len_s2; i++)
-			ptr[i] = s1[i];
-		if ( ; j <= n; i++)
-			ptr[i + j] = s2[j];
-	}
+
+	ptr = malloc(sizeof(*ptr) * total_len + 1);
+	if (ptr == NULL)
+		return (NULL);
+
+	for (i = 0; i < len_s1; i++)
+		ptr[i] = s1[i];
+	for (j = 0; j < n; j++)
+		ptr[i + j] = s2[j];
+
 	return (ptr);
 }
-
