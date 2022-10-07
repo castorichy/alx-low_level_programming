@@ -19,9 +19,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	len_s1 = len_s2 = total_len = 0;
 
 	if (s1 == NULL)
-		i = 0;
+		s1 = "";
 	if (s2 == NULL)
-		j = 0;
+		s2 = "";
 
 	/* length of s1 and s2 */
 	for (i = 0; *(s1 + i); i++)
