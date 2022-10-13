@@ -1,5 +1,7 @@
 #include "dog.h"
 #include <stdlib.h>
+
+
 /**
  * _strdup - returns a pointer to space in memory containing copy of string.
  * @s: pointer to the string.
@@ -16,7 +18,7 @@ char *_strdup(char *s)
 /*Get the length of the string.*/
 	while (s[i] != '\0')
 		i += 1;
-/*+ to include the terminating character in size.*/
+/*+1 to include the terminating character in size.*/
 	i++;
 
 	dup = malloc(i * sizeof(*dup));
