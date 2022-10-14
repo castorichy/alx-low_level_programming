@@ -25,6 +25,4 @@ int sum_them_all(const unsigned int n, ...)
 	else
 		return (0);
 	return (sum);
-
-	
 }
