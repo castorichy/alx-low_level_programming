@@ -38,11 +38,11 @@ void print_all(const char * const format, ...)
 					i++;
 					continue;
 			}
-			sep = ", ";
+			if (i < strlen(format) - 1)
+				printf(", ");
 			i++;
 		}
 	}
-
-	printf("\n");
 	va_end(list);
-} 
+	printf("\n");
+}
