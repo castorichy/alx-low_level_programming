@@ -10,7 +10,7 @@
 size_t print_list(const list_t *h)
 {
 	const list_t *nil;
-	size_t n;
+	size_t i;
 
 	nil = h;
 
