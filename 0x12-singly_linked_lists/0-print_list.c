@@ -2,7 +2,7 @@
 
 /**
  * print_list - prints list
- * @n: pointer to struct
+ * @h: pointer to struct
  *
  * Return: length of str
  */
@@ -15,7 +15,7 @@ size_t print_list(const list_t *h)
 	{
 		if (h->str == NULL)
 			printf("[0] (nil)");
-		while(h->str)
+		while (h->str)
 			n++;
 		printf("%s", h->str);
 	}
