@@ -1,3 +1,4 @@
+#include <string.h>
 #include "lists.h"
 
 /**
@@ -20,14 +21,17 @@ list_t *add_node(list_t **head, const char *str)
 	}
 	else
 	{
-		newnode->str = str;
-		while (str[i])
+		newnode->next = old;
+		newnode->str = strdup(str);
+		while (str[i] != '\0')
 		{
-			newnode->len = i++;
+			i++;
 		}
+		newnode->len = i++;
 
-		newnode = old->next;
+
 		old = newnode;
 	}
 	return (old);
+	free(newnode);
 }
