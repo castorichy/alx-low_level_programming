@@ -9,12 +9,11 @@
 
 size_t list_len(const list_t *h)
 {
-	unsigned int i;
-	const list_t *head;
+	size_t i;
 
-	for (i = 0; head != NULL; i++)
+	for (i = 0; h; i++)
 	{
-		head = head->next;
+		h = h->next;
 	}
 	return (i);
 }
