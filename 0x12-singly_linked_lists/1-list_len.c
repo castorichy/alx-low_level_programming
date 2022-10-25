@@ -1,22 +1,20 @@
 #include "lists.h"
 
 /**
- * print_list - prints list
+ * list_len - counts the number of elements in a lish
  * @h: pointer to struct
  *
- * Return: length of str
+ * Return: number of elements
  */
 
 size_t list_len(const list_t *h)
 {
-	const list_t *nil;
 	unsigned int i;
+	const list_t *head;
 
-	nil = h;
-
-	for (i = 0; nil; i++)
-	i
-		nil = nil->next;
+	for (i = 0; head != NULL; i++)
+	{
+		head = head->next;
 	}
 	return (i);
 }
