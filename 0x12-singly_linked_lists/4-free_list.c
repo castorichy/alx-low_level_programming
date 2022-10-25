@@ -1,8 +1,8 @@
 #include "lists.h"
 
 /**
- * 
- * 
+ * free_list - frees memory allocated to list_t
+ * @head: nodes
 */
 
 void free_list(list_t *head)
