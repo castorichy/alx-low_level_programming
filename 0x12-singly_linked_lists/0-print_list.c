@@ -13,7 +13,6 @@ size_t print_list(const list_t *h)
 	unsigned int i;
 
 	nil = h;
-
 	for (i = 0; nil; i++)
 	{
 		if (nil->str == NULL)
