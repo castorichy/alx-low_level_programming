@@ -10,12 +10,14 @@
 int pop_listint(listint_t **head)
 {
 	listint_t *delete;
+	int n;
 
 	if (!head || !(*head))
 		return (EXIT_SUCCESS);
 
 	delete = *head;
 	*head = delete->next;
-	return (delete->n);
+	n = delete->n;
 	free(delete);
+	return (n);
 }
