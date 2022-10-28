@@ -12,7 +12,7 @@ int pop_listint(listint_t **head)
 	listint_t *delete;
 
 	if (!head || !(*head))
-		return (0);
+		return (EXIT_SUCCESS);
 
 	delete = *head;
 	*head = delete->next;
