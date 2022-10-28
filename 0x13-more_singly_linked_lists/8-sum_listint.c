@@ -11,11 +11,9 @@ int sum_listint(listint_t *head)
 {
 	int sum = 0;
 
-	if (!head)
-		return (0);
-	while (head->next)
+	while (head != NULL)
 	{
-		sum = sum + head->n;
+		sum += head->n;
 		head = head->next;
 	}
 	return (sum);
