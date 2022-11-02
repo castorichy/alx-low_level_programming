@@ -16,12 +16,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (!filename)
 		return (0);
-	
+
 	/*creating a file*/
 	fd = open(filename, O_RDONLY);
 	if (fd == -1)
 		return (0);
-	
+
 	/* reading and sending file contents to std out*/
 	str = malloc(sizeof(char) * letters);
 	if (!str)
@@ -44,7 +44,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	/*closing the file*/
 
 	if (rfd != wfd)
-	   return (0);
+		return (0);
 	return (wfd);
 
 }
