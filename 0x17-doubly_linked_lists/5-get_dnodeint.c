@@ -15,18 +15,25 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 
 	if (head == NULL)
 		return (NULL);
-
-	while (head->next != NULL)
+	if (index == count)
+		nodeNinth = head;
+	else if (index > 0 && index < count)
 	{
-		++count;
-		if (head->next)
+		while (head->next != NULL)
 		{
-			if (count == index)
-				nodeNinth = head->next;
+			++count;
+			if (head->next)
+			{
+				if (count == index)
+					nodeNinth = head->next;
+			}
+			else
+				return (NULL);
+			head = head->next;
 		}
-		else
-			return (NULL);
-		head = head->next;
 	}
+	else
+		return (NULL);
+	
 	return (nodeNinth);
 }
