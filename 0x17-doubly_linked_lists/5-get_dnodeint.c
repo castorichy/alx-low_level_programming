@@ -17,22 +17,22 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 		return (NULL);
 	if (index == count)
 		nodeNinth = head;
-	else if (index > 0 && index < count)
+	else
 	{
 		while (head->next != NULL)
 		{
 			++count;
-			if (head->next)
+			if (count == index)
 			{
-				if (count == index)
+				if (head->next)
+				{
 					nodeNinth = head->next;
-			}
-			else
+				}
 				return (NULL);
+			}
+			
 			head = head->next;
 		}
 	}
-	else
-		return (NULL);
 	return (nodeNinth);
 }
